@@ -11,7 +11,7 @@
 
 ---
 
-## Viewing Options
+## Preview Options
 
 1. Escaped JSON String
 2. Rendered Markdown Preview
