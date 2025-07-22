@@ -20,4 +20,4 @@
 
 ## App
 
-[View on GitPage](https://chrisnajman.github.io/markown-to-json)
+[View on GitPage](https://chrisnajman.github.io/markdown-to-json)
