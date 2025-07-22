@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Markdown to JSON-safe String + Live Preview</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <h1>Markdown to JSON-safe String + Preview</h1>
+
+  <div id="drop-zone" class="drop-zone">Drop your <strong>.md</strong> file here</div>
+
+  <div class="controls">
+    <label>
+      <input type="radio" name="format" value="string" checked />
+      Export as plain string (.txt)
+    </label>
+    <label>
+      <input type="radio" name="format" value="json" />
+      Export as wrapped JSON (.json)
+    </label>
+  </div>
+
+  <button id="download" disabled>Download</button>
+
+  <div class="tabs">
+    <button class="tab-button active" data-tab="escaped">Escaped JSON String</button>
+    <button class="tab-button" data-tab="preview">Rendered Markdown Preview</button>
+  </div>
+
+  <pre id="escaped-output" class="tab-content active">Awaiting file...</pre>
+  <div id="preview-output" class="tab-content"></div>
+
+</body>
+
+</html>

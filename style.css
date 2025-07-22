@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+    padding: 2rem;
+    text-align: center;
+}
+.drop-zone {
+    border: 2px dashed #ccc;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    background: #f9f9f9;
+    color: #666;
+}
+.controls {
+    margin: 1rem 0;
+}
+label {
+    margin-right: 1rem;
+}
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.tab-button {
+    border: none;
+    background: #eee;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+.tab-button.active {
+    background: #ccc;
+    font-weight: bold;
+}
+.tab-content {
+    display: none;
+    text-align: left;
+    padding: 1rem;
+    background: #f0f0f0;
+    margin-top: 1rem;
+    border-radius: 4px;
+    overflow-x: scroll;
+}
+.tab-content.active {
+    display: block;
+}
