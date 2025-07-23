@@ -1,5 +1,6 @@
 const dropZone = document.getElementById("drop-zone")
 const downloadBtn = document.getElementById("download")
+const resetBtn = document.getElementById("reset")
 const formatRadios = document.querySelectorAll('input[name="format"]')
 const escapedOutput = document.getElementById("escaped-output")
 const previewOutput = document.getElementById("preview-output")
@@ -27,6 +28,7 @@ dropZone.addEventListener("drop", (e) => {
     escapedOutput.textContent = "Please drop a valid .md file."
     previewOutput.innerHTML = ""
     downloadBtn.disabled = true
+    resetBtn.disabled = true
     return
   }
 
@@ -45,6 +47,7 @@ dropZone.addEventListener("drop", (e) => {
     escapedOutput.textContent = formatOutput(escapedContent, selectedFormat)
     previewOutput.innerHTML = marked.parse(rawMarkdown)
     downloadBtn.disabled = false
+    resetBtn.disabled = false
   }
 
   reader.readAsText(file)
@@ -69,6 +72,10 @@ downloadBtn.addEventListener("click", () => {
       : `${originalFileName}.txt`
   link.click()
   URL.revokeObjectURL(url)
+})
+
+resetBtn.addEventListener("click", () => {
+  location.reload()
 })
 
 tabButtons.forEach((btn) => {
