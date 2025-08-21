@@ -18,6 +18,4 @@
 
 ---
 
-## App
-
 [View on GitPage](https://chrisnajman.github.io/markdown-to-json)
